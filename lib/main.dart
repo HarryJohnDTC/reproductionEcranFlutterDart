@@ -32,7 +32,6 @@ class AjouterPanierUI extends StatelessWidget {
       //appBar: AppBar(),
       body: Container(
         margin: EdgeInsets.only(top: 35),
-        // ignore: prefer_const_constructors
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -74,7 +73,7 @@ class AjouterPanierUI extends StatelessWidget {
                     ),
                   ),
                 )),
-            // ignore: prefer_const_constructors
+
             SizedBox(
               height: 5,
             ),
@@ -98,10 +97,8 @@ class AjouterPanierUI extends StatelessWidget {
               height: 5,
             ),
             // ignore: prefer_const_constructors
-            Container(
-                child: Center(
-                    child:
-                        Text('\nGarantie satisfait ou remboursé de 30 jours'))),
+            Center(
+                child: Text('\nGarantie satisfait ou remboursé de 30 jours')),
             // ignore: prefer_const_constructors
             SizedBox(
               height: 10,
@@ -198,7 +195,8 @@ class AjouterPanierUI extends StatelessWidget {
                 // ignore: duplicate_ignore
                 // ignore: prefer_const_constructors, prefer_const_literals_to_create_immutables
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 100),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.1),
                   // ignore: duplicate_ignore
                   // ignore: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
@@ -206,8 +204,10 @@ class AjouterPanierUI extends StatelessWidget {
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Padding(
-                        padding:
-                            const EdgeInsets.only(left: 40, right: 80, top: 40),
+                        padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width * 0.1,
+                            right: MediaQuery.of(context).size.width * 0.2,
+                            top: 40),
                         child: Text(
                           'Partager',
                           style: TextStyle(
@@ -228,8 +228,9 @@ class AjouterPanierUI extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 180),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: MediaQuery.of(context).size.width * 0.3),
                   child: Text(
                     'Appliquer le coupon',
                     style: TextStyle(
