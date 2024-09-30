@@ -31,7 +31,7 @@ class AjouterPanierUI extends StatelessWidget {
     return Scaffold(
       //appBar: AppBar(),
       body: Container(
-        margin: EdgeInsets.only(top: 35),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -229,7 +229,7 @@ class AjouterPanierUI extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                      vertical: 10,
+                      vertical: MediaQuery.of(context).size.height * 0.02,
                       horizontal: MediaQuery.of(context).size.width * 0.3),
                   child: Text(
                     'Appliquer le coupon',
@@ -307,6 +307,14 @@ class AjouterPanierUI extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+                child: Text(
+              'Le code de coupon saisi n\'est pas valide pour ce cours',
+              style: TextStyle(color: Colors.red),
+            ))
           ],
         ),
       ),
